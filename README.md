@@ -74,13 +74,6 @@ Au sein de l'équipe, j'ai pris en charge le développement de modules nécessit
 - **Journalisation** : Chaque vente ou modification de stock est enregistrée dans une table d'audit.
 - **Validation** : Vérification stricte des formats de données (emails, numéros de sécurité sociale) via des utilitaires dédiés.
 
----
-
-## 👥 L'Équipe
-- **Victoria Massamba**
-- Nicolas Adamczyk
-- Hugo Vitorino Pereira
-- Jason Darius
 
 ---
 *Projet finalisé en 2025 - Présenté à l'Université Paris Cité*
