@@ -45,17 +45,16 @@ Le projet a été conçu selon une architecture **MVC (Modèle-Vue-Contrôleur)*
 
 ## 📸 Aperçu de l'application
 
-### 📊 Tableau de bord & Statistiques
-![Tableau de bord](docs/screenshots/statistics-dashboard.png)
-
-### 👥 Gestion de la Clientèle
-![Gestion Clients](docs/screenshots/clients-dashboard.png)
-
 ### 📄 Vente avec Ordonnance
 ![Vente Ordonnance](docs/screenshots/add-sale-with-prescription.png)
 
 ### 🛒 Système de Réservation
 ![Réservation](docs/screenshots/add-reservation.png)
+
+
+### 📊 Tableau de bord & Statistiques
+![Tableau de bord](docs/screenshots/statistics-dashboard.png)
+
 
 ---
 
