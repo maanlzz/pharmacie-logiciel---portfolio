@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="someOtherNode" alignment="CENTER" prefHeight="80.0" styleClass="menu-bar" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="global.BarreMenuController">
+    <MenuButton alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#handleHome" prefHeight="80.0" prefWidth="45.0" styleClass="menu-bar" HBox.hgrow="ALWAYS">
+        <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/LogoHome.png" />
+            </ImageView>
+        </graphic>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-bar" text="VENTES" HBox.hgrow="ALWAYS">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleVentesAvecOrdonnance" text="Ventes avec ordonnance" />
+            <MenuItem mnemonicParsing="false" onAction="#handleVentesSansOrdonnance" text="Ventes sans ordonnance" />
+        </items>
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="109.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleNosMedicaments" styleClass="menu-bar" text="NOS MÉDICAMENTS" HBox.hgrow="ALWAYS">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="208.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="FOURNISSEURS &amp; COMMANDES" HBox.hgrow="ALWAYS">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleFournisseursAchat" text="Achats" />
+            <MenuItem mnemonicParsing="false" onAction="#handleFournisseursSuiviDesCommandes" text="Suivi des commandes" />
+            <MenuItem mnemonicParsing="false" onAction="#handleFournisseursConsulter" text="Consulter un fournisseur" />
+            <MenuItem mnemonicParsing="false" onAction="#handleFournisseursPanier" text="Panier" />
+        </items>
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="307.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-bar" text="CLIENTS" HBox.hgrow="ALWAYS">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+      <items>
+         <MenuItem mnemonicParsing="false" onAction="#handleClientsConsulter" text="Consulter un client" />
+         <MenuItem mnemonicParsing="false" onAction="#handlerReservationPharmacie" text="Réservations" />
+      </items>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="406.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleFinancesPerformances" styleClass="menu-bar" text="FINANCES" HBox.hgrow="ALWAYS">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="505.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleAnalyses" styleClass="menu-bar" text="ANALYSES" HBox.hgrow="ALWAYS">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="604.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-bar" text="ADMIN" HBox.hgrow="ALWAYS">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#handleAdminPersonnel" text="Personnel" />
+            <MenuItem disable="true" mnemonicParsing="false" onAction="#handleAdminLogs" text="Logs" />
+            <MenuItem mnemonicParsing="false" onAction="#handleAdminBdd" text="Base de données" />
+        </items>
+        <font>
+            <Font size="15.0" />
+        </font>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="703.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onMouseClicked="#handleNotifications" styleClass="menu-bar" HBox.hgrow="ALWAYS">
+        <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/LogoNotifications.png" />
+            </ImageView>
+        </graphic>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <MenuButton alignment="CENTER" layoutX="823.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-bar" HBox.hgrow="ALWAYS">
+        <items>
+            <MenuItem disable="true" mnemonicParsing="false" onAction="#handleCompteMessagerie" text="Messagerie" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCompteMotDePasse" text="Mot de passe" />
+            <MenuItem mnemonicParsing="false" onAction="#handleCompteDeconnexion" text="Déconnexion" />
+            <MenuItem fx:id="userNameMenuItem" mnemonicParsing="false" style="-fx-underline: false;" text="NOM PRENOM" />
+            <MenuItem fx:id="handleCompteQuitter" mnemonicParsing="false" onAction="#compteQuitterHandler" text="Quitter" />
+        </items>
+        <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/LogoCompte.png" />
+            </ImageView>
+        </graphic>
+        <HBox.margin>
+            <Insets />
+        </HBox.margin>
+    </MenuButton>
+    <padding>
+        <Insets left="20.0" />
+    </padding>
+</HBox>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+   Auteur : Hugo VITORINO PEREIRA
+   Date : 26/03/2025
+   Description : Fenêtre permettant la consultation d'un client.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="pageConsultationClient" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../../styles/style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.clients.ClientConsultationController">
+   <top>
+      <fx:include source="../BarreMenu.fxml" />
+   </top>
+   <center>
+      <GridPane fx:id="gridP" prefHeight="508.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="680.0" />
+            <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="600.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="nomClientLabel" text="Nom" wrapText="true" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="70.0" top="55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e1" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="117.0" top="55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="prenomClientLabel" text="Prénom" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e2" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="142.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="dateNaissanceClientLabel" text="Date de naissance" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e3" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="230.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="adresseClientLabel" text="Adresse" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e4" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="145.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="telephoneClientLabel" text="Numéro de téléphone" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e5" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="270.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="emailClientLabel" text="Adresse email" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e6" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="195.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="nomClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="180.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="prenomClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="180.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker fx:id="dateNaissanceClientDatePicker" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="250.0" top="30.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="adresseClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="180.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="telephoneClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="300.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="300.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="emailClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="300.0" styleClass="champ-gris" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="230.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="mutuelleClientLabel" text="Mutuelle" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets top="55.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="numeroSecuriteSocialClientLabel" text="Numéro de sécurité sociale" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e7" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="245.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="medecinLabel" text="Médecin traitant :" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="210.0" top="40.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="nomMedecinTraitantLabel" text="Nom" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e8" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="50.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="prenomMedecinTraitantLabel" text="Prénom" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e9" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="75.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="adresseMedecinTraitantLabel" text="Adresse" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e10" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="75.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="telephoneMedecinTraitantLabel" prefHeight="49.0" prefWidth="195.0" text="Numéro de téléphone" wrapText="true" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="e11" prefHeight="30.0" prefWidth="9.0" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="200.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="mutuelleClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+               <GridPane.margin>
+                  <Insets left="110.0" top="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="numeroSecuriteSocialClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="291.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="280.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="nomMedecinTraitantTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="100.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="prenomMedecinTraitantTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="100.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="adresseMedecinTraitantTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="370.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="100.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="telephoneMedecinTraitantTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="300.0" styleClass="champ-gris" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="230.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Button fx:id="consulterReservationButton" mnemonicParsing="false" onAction="#consultationReservationHandler" prefHeight="30.0" styleClass="bouton-jaune" text="CONSULTER SES RESERVATIONS" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets top="40.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="consulterOrdonnanceButton" mnemonicParsing="false" onAction="#consultationOrdonnanceHandler" prefHeight="30.0" prefWidth="195.0" styleClass="bouton-vert" text="CONSULTER SES ORDONNANCES" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="300.0" top="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="ajouterOrdonnanceButton" mnemonicParsing="false" onAction="#ajoutOrdonnanceHandler" prefHeight="25.0" prefWidth="195.0" styleClass="bouton-vert" text="AJOUTER UNE ORDONNANCE" GridPane.hgrow="ALWAYS" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="300.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="specialisationMedecinLabel" text="Spécialisation" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="specialisationMedecinTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="317.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="150.0" top="30.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label fx:id="e13" styleClass="label-etoile" text="*" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="125.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="sexeClientLabel" text="Sexe" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="sexeClientComboBox" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" promptText="Sexe" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="150.0" top="30.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label fx:id="e12" styleClass="label-etoile" text="*" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="115.0" top="30.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox fx:id="zoneBoutons" alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="1280.0" spacing="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="retourFenetrePrecedenteButton" mnemonicParsing="false" onAction="#retourHandler" prefHeight="30.0" prefWidth="100.0" styleClass="bouton-retour" text="Retour" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="30.0" top="30.0" />
+               </HBox.margin>
+            </Button>
+            <HBox fx:id="hbEspaceur" alignment="CENTER" prefHeight="137.0" prefWidth="320.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="ajouterReservationButton" mnemonicParsing="false" onAction="#ajouterReservationHandler" prefHeight="30.0" styleClass="bouton-jaune" text="AJOUTER UNE RESERVATION">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="effectuerModificationButton" mnemonicParsing="false" onAction="#effectuerModificationHandler" prefHeight="30.0" prefWidth="210.0" styleClass="bouton-vert" text="EFFECTUER DES MODIFICATIONS" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets right="120.0" />
+               </HBox.margin>
+            </Button>
+         </children></HBox>
+   </bottom>
+</BorderPane>

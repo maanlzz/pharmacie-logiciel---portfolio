@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.clients.reservations.ClientsReservationAjoutController">
+   <content>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="720.0" prefWidth="1280.0">
+          <stylesheets>
+              <URL value="@../../../styles/style.css" />
+          </stylesheets>
+      
+      
+          <top>
+              <fx:include source="../../BarreMenu.fxml" />
+          </top>
+          
+         <left>
+            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1292.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="577.6666361490886" minWidth="10.0" prefWidth="516.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.3333333333333" minWidth="10.0" prefWidth="65.66666666666663" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="433.3333333333333" minWidth="10.0" prefWidth="75.00002034505212" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.3333129882814" minWidth="10.0" prefWidth="650.3333129882814" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="nomClientLabel" text="Nom :" wrapText="true" GridPane.rowIndex="1">
+                     <padding>
+                        <Insets left="70.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="prenomClientLabel" text="Prénom :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="dateNaissanceClientLabel" text="Date de naissance :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="adresseClientLabel" text="Adresse :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="telephoneClientLabel" text="Numéro de téléphone :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="6">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="emailClientLabel" text="Adresse email :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="7">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="nomClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+                  <TextField fx:id="prenomClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="244.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="dateNaissanceDatePicker" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="203.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+                  <TextField fx:id="adresseClientTextField" disable="true" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="345.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+                  <TextField fx:id="telephoneClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="217.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+                  <TextField fx:id="emailClientTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="283.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+                  <Label fx:id="mutuelleClientLabel" text="Mutuelle :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="10">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label fx:id="numeroSecuriteSocialClientLabel" text="Numéro de sécurité sociale :" wrapText="true" GridPane.hgrow="ALWAYS" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="mutuelleTextField" disable="true" maxWidth="-Infinity" prefHeight="25.0" prefWidth="233.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="10" />
+                  <Label fx:id="infoClientLabel" prefHeight="30.0" prefWidth="393.0" text="Récapitulatif des informations du client :" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="secuTextField" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="181.0" styleClass="champ-gris" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+                  <ComboBox fx:id="rechercherParButton" prefHeight="25.0" prefWidth="133.0" promptText="Rechercher par" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" />
+                  <TextField fx:id="zoneRechercheMedicament" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="385.0" promptText="Rechercher un médicament de la pharmacie" styleClass="barre-recherche" text="" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS">
+                     <GridPane.margin>
+                        <Insets right="35.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="enregistrerReservationButton" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#enregistrerReservationHandler" prefHeight="23.0" prefWidth="149.0" styleClass="bouton-vert" text="Enregistrer la réservation" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="12">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Retour" GridPane.rowIndex="11">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label fx:id="sexeClientLabel" text="Sexe :" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="70.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ChoiceBox fx:id="sexeChoiceBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" GridPane.halignment="RIGHT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" />
+                  <TableView fx:id="reservationTableView" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="282.0" prefWidth="615.0" GridPane.columnIndex="3" GridPane.rowIndex="9">
+                    <columns>
+                      <TableColumn fx:id="nomMedicamentColumn" maxWidth="345.99992883205414" prefWidth="345.99992883205414" resizable="false" text="Intitulé du médicament réservé" />
+                      <TableColumn fx:id="quantiteColumn" maxWidth="134.0" prefWidth="134.0" resizable="false" text="Quantité" />
+                        <TableColumn fx:id="actionsReservationColumn" minWidth="2.0" maxWidth="270.0" prefWidth="270.6667785644531" resizable="false" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="zoneAffichageMedicament" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#medicamentSelectionHandler" prefHeight="199.0" prefWidth="615.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <columns>
+                        <TableColumn fx:id="codeCisColumn" prefWidth="151.0" text="Code CIS" />
+                        <TableColumn fx:id="denominationColumn" prefWidth="250.0" text="Dénomination" />
+                        <TableColumn fx:id="prixColumn" minWidth="2.0" prefWidth="102.0" text="Prix" />
+                        <TableColumn fx:id="dosageColumn" minWidth="2.0" prefWidth="147.0" text="Dosage" />
+                     </columns>
+                  </TableView>
+                  <Label fx:id="reservationLabel" prefHeight="27.0" prefWidth="215.0" text="Table de réservation :" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+               </children>
+            </GridPane>
+         </left>
+      </BorderPane>
+   </content>
+</ScrollPane>

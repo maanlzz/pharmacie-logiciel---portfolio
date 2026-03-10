@@ -1,0 +1,32 @@
+/* Appliquer un fond clair à l'application */
+.root {
+    -fx-background-color: #F5F5F5;
+}
+
+/* Styliser les boutons d'ajout */
+.bouton-ajouter {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+}
+
+/* Styliser les boutons de suppression */
+.bouton-supprimer {
+    -fx-background-color: transparent;
+    -fx-padding: 5px;
+}
+
+/* Mettre en rouge les messages de rupture et ordonnance */
+.label-rupture {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+.label-ordonnance {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+/* Styliser les boutons au survol */
+.bouton-ajouter:hover, .bouton-supprimer:hover {
+    -fx-opacity: 0.7;
+}
